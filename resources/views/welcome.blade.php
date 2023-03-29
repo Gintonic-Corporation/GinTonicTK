@@ -1,20 +1,20 @@
+<?php
+    function linkResource($rel, $href) {
+        echo "<link rel='{$rel}' href='{$href}'>";
+    }
+?>
+
+<!DOCTYPE html> 
 <html>
     <head>
         <title>Login</title>        
-        <link rel="stylesheet" href="resources/css/login.css" style="stylesheet">
+        <?php linkResource("stylesheet", "GinTonicTK/resources/css/login.css"); ?>
     </head>
     <body>
         <h1>GinTonicTK</h1>
-        <h2>Bejelentkezés</h2>
-        <form action="/login" method="POST">
-            @csrf
-            <label for="email">Username:</label>
-            <input type="text" id="username" name="username">
-
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password">
-
-            <button type="submit">Login</button>
+        <h2>Welcome</h2>
+        <form action="views/login.blade.php" method="get">
+            <button type="submit">Sign-in</button>
         </form>
     </body>
 </html>

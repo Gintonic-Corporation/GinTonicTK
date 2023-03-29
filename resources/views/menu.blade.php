@@ -1,7 +1,9 @@
 <html>
     <head>
         <title>Main menu</title>
-        <link rel="stylesheet" href="resources/css/menu.css" style="stylesheet">
+        <style>
+            <?php include 'GinTonicTK/resources/css/menu.css'; ?>
+        </style>
     </head>
     <body>
         <h1>GinTonicTK</h1>   
