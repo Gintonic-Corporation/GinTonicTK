@@ -1,20 +1,38 @@
-<?php
-    function linkResource($rel, $href) {
-        echo "<link rel='{$rel}' href='{$href}'>";
-    }
-?>
-
-<!DOCTYPE html> 
+<!DOCTYPE HTML>
 <html>
-    <head>
-        <title>Login</title>        
-        <?php linkResource("stylesheet", "GinTonicTK/resources/css/login.css"); ?>
-    </head>
-    <body>
-        <h1>GinTonicTK</h1>
-        <h2>Welcome</h2>
-        <form action="views/login.blade.php" method="get">
-            <button type="submit">Sign-in</button>
-        </form>
-    </body>
+	<head>
+		<title>GinTonicTK</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		{{-- <link rel="stylesheet" href="resources/css/main.css" /> --}}
+		<noscript><link rel="stylesheet" href="resources/css/noscript.css" /></noscript>
+        @vite('resources/css/main.css')
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper-->
+			<div id="wrapper">
+
+				@include('includes._nav')
+
+				<!-- Main -->
+					<div id="main">
+
+						@include('includes._home')
+
+						@include('includes._borrow')
+
+						@include('includes._search')
+
+					</div>
+
+				<!-- Footer -->
+					@include('includes._footer')
+
+			</div>
+
+		<!-- Scripts -->
+			@include('includes._scripts')
+
+	</body>
 </html>
