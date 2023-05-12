@@ -6,6 +6,6 @@
     </header>
     <a href="#work" class="jumplink pic">
         <span class="arrow icon solid fa-chevron-right"><span>Login</span></span>
-        <img src="{{ Vite::asset('resources/images/me.jpg') }}" alt="" />
+        <img src="{{ Vite::asset('resources/images/me.jpg') }}" alt="logo" />
     </a>
 </article>
