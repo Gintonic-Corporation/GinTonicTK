@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CustomerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,4 @@ Route::get('/login', function () {
 });
 
 Route::post('/login', 'LoginController@login');
+Route::resource('customer', CustomerController::class);

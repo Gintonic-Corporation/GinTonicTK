@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('star');
             $table->string('category');
             $table->string('ptype');
-            $table->bool('available')->default(false);
+            $table->boolean('available')->default(false);
             $table->timestamps();
         });
     }
