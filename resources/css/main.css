@@ -2253,15 +2253,12 @@ button{
 button:hover {background-color: #b62121}
 #logbutton {background-color: #07cad1;}
 #logbutton:hover{background-color: #79ffff;}
-.loginheader{
-	height: 200px;
-	background-color: rgba(255,255,255,0.10);
-	backdrop-filter: blur(20px);
-}
+
 .loginheader h1{
+	font-family: 'Poppins',sans-serif;
 	text-align: center;
 	font-weight: 500;
-	font-size: 5em;
-	margin: 20px;
-	padding: 10px;
+	font-size: 4em;
+	margin: 50px;
+	padding: 20px;
 }
