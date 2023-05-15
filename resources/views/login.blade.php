@@ -18,12 +18,12 @@
         <div class="loginmain">
             <form action="/login" method="POST">
                 @csrf
-                <input type="text" id="username" name="username" placeholder="Felhasználónlév">
+                <input type="text" id="username" name="username" placeholder="Felhasználónlév" oninput="return showicon()">
                 <br>
-                <input type="password" id="password" name="password" placeholder="Jelszó">
+                <input type="password" id="password" name="password" placeholder="Jelszó" oninput="return showicon()">
                 <br>
                 <button type="submit" id="logbutton">Bejelentkezés</button>
-                <button onclick="'clr()'">Törlés</button>
+                <button type="reset">Törlés</button>
             </form>
 
         </div>

@@ -9,7 +9,7 @@ class LoginController extends Controller
 {
     public function showLoginForm()
     {
-        return view('login');
+        return view('/login');
     }
 
     public function login(Request $request)
@@ -18,7 +18,7 @@ class LoginController extends Controller
 
         if (Auth::attempt($credentials)) {
             // Authentication successful
-            return redirect()->intended('/menu');
+            return redirect()->intended('/welcome');
         } else {
             // Authentication failed
             return back()->withErrors(['username' => 'Invalid username or password.']);
