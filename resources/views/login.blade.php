@@ -1,28 +1,47 @@
-<?php
-    function linkResource($rel, $href) {
-        echo "<link rel='{$rel}' href='{$href}'>";
-    }
-?>
-
 <!DOCTYPE html> 
 <html>
     <head>
-        <title>Login</title>        
+		<title>GinTonicTK</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		{{-- <link rel="icon" href="public/favicon.ico" type="image/x-icon"/> --}}
+		{{-- <link rel="stylesheet" href="resources/css/main.css" /> --}}
+		<noscript><link rel="stylesheet" href="resources/css/noscript.css" /></noscript>
+        @vite('resources/css/main.css')
+        <script src="login.js"></script>
+	</head>
         
-        <?php linkResource("stylesheet", "GinTonicTK/resources/css/login.css"); ?>
-    </head>
-    <body>
-        <h1>GinTonicTK</h1>
-        <h2>Bejelentkezés</h2>
-        <form action="/login" method="POST">
-            @csrf
-            <label for="email">Username:</label>
-            <input type="text" id="username" name="username">
-            <br><br>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password">
-            <br><br>
-            <button type="submit">Login</button>
-        </form>
-    </body>
+    <body class="is-preload">
+    <h1 id="cim">GinTonicTK</h1>
+    <!-- Wrapper-->
+        <div id="wrapper">			
+
+            <!-- Main -->
+                <div id="loginform">
+
+                
+                
+                <form action="/login" method="POST">
+                    @csrf
+                    <input type="text" id="username" name="username" placeholder="Felhasználónlév">
+                    <br><br>
+                    <input type="password" id="password" name="password" placeholder="Jelszó">
+                    <br><br>
+                    <button type="submit">Bejelentkezés</button>
+                    <button onClick="clear_fields()">törlés</button>
+                </form>
+
+                </div>
+
+            <!-- Footer -->
+                @include('includes._footer')
+
+        </div>
+
+    <!-- Scripts -->
+        @include('includes._scripts')
+
+	</body>
+
+   
 </html>

@@ -15,12 +15,9 @@ use App\Http\Controllers\CustomerController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('login');
 });
 
-Route::get('/login', function () {
-    return view('welcome');
-});
 
 Route::post('/login', 'LoginController@login');
 Route::resource('customer', CustomerController::class);
