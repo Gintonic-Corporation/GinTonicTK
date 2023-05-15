@@ -23,7 +23,7 @@
                 <input type="password" id="password" name="password" placeholder="Jelszó">
                 <br>
                 <button type="submit" id="logbutton">Bejelentkezés</button>
-                <button onclick="clear_fields()">Törlés</button>
+                <button onclick="'clr()'">Törlés</button>
             </form>
 
         </div>

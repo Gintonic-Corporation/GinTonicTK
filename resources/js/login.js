@@ -1,4 +1,4 @@
-function clear_fields()
+function clr()
 {  
    document.getElementById('username').value = "";
    document.getElementById('password').value = "";

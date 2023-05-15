@@ -2201,7 +2201,7 @@ body{
     background-color: #080710;
 }
 form{
-    height: 600px;
+    height: 550px;
     width: 450px;
     background-color: rgba(255,255,255,0.10);
     position: absolute;
@@ -2230,13 +2230,13 @@ input{
     border-radius: 10px;
     padding: 0 10px;
     margin-top: 10px;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 300;
 }
 ::placeholder{
     color: #e5e5e5;
 	text-align: center;
-	font-size: 1.3em;
+	font-size: 1em;
 	
 }
 button{
@@ -2245,7 +2245,7 @@ button{
     background-color: #0bb644;
 	color:rgba(0, 0, 0);
     padding: 20px 0;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     border-radius: 10px;
     cursor: pointer;
@@ -2261,4 +2261,19 @@ button:hover {background-color: #b62121}
 	font-size: 4em;
 	margin: 50px;
 	padding: 20px;
+}
+
+
+@media screen and (max-width: 736px) {
+
+	form{
+		height: 500px;
+		width: 450px;
+	}
+
+	.loginheader h1{
+		font-size: 5em;
+		margin: 50px;
+		padding: 40px;
+	}
 }
