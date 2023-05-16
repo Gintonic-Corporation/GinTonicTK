@@ -2296,14 +2296,14 @@ button[type="reset"]:hover{
 @media screen and (max-width: 500px) {
 
 	#logform{
-		height: 400px;
+		height: 460px;
 		width: 250px;
 	}
 
 	.loginheader h1{
-		font-size: 5em;
+		font-size: 3.2em;
 		margin: 50px;
-		padding: 40px;
+		padding: 60px;
 	}
 	#username,#password{
 		height: 40px;
