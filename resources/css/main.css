@@ -2233,7 +2233,7 @@ body{
     margin-top: 10px;
     font-size: 20px;
     font-weight: 300;
-	color: #07cad1;
+	color: #000;
 	-webkit-text-stroke-color: #0bb644;
 }
 ::placeholder{
@@ -2271,7 +2271,7 @@ button[type="reset"]:hover{
 	font-size: 4em;
 	margin: 50px;
 	padding: 20px;
-	text-shadow: 0 0 40px rgba(28, 27, 36, 0.55);
+	text-shadow: 15px 15px 40px rgba(28, 27, 36, 0.75);
 	text-transform: capitalize;
 	mix-blend-mode: multiply;
 	
