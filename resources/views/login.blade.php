@@ -16,11 +16,11 @@
             <h1>GinTonicTK</h1>
         </div>
         <div class="loginmain">
-            <form action="/login" method="POST">
+            <form action="/login" method="POST" id="logform">
                 @csrf
-                <input type="text" id="username" name="username" placeholder="Felhasználónlév" oninput="return showicon()">
+                <input type="text" id="username" name="username" placeholder="Felhasználónlév">
                 <br>
-                <input type="password" id="password" name="password" placeholder="Jelszó" oninput="return showicon()">
+                <input type="password" id="password" name="password" placeholder="Jelszó">
                 <br>
                 <button type="submit" id="logbutton">Bejelentkezés</button>
                 <button type="reset">Törlés</button>

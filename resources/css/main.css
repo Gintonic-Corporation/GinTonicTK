@@ -2190,7 +2190,7 @@ input, select, textarea {
 			}
 
 		}
-/*LOGIN beta*/
+/* Login */
 *:before,
 *:after{
     padding: 0;
@@ -2200,7 +2200,7 @@ input, select, textarea {
 body{
     background-color: #080710;
 }
-form{
+#logform{
     height: 550px;
     width: 700px;
     background-color: rgba(255,255,255,0.10);
@@ -2214,7 +2214,7 @@ form{
     box-shadow: 0 0 40px rgba(28, 27, 36, 0.55);
     padding: 40px 20px;	
 }
-form *{
+#logform *{
     font-family: 'Poppins',sans-serif;
     color: #000;
     letter-spacing: 0.44px;
@@ -2222,24 +2222,28 @@ form *{
     border: none;
 }
 
-input{
+#username,#password{
     display: block;
     height: 55px;
     width: 100%;
-    background-color: rgba(255,255,255,0.07);
+    /*background-color: rgba(255,255,255,0.07);*/
+    background-color: rgba(red, green, blue, 0.5);
     border-radius: 10px;
     padding: 0 10px;
     margin-top: 10px;
     font-size: 20px;
     font-weight: 300;
+	color: #07cad1;
+	-webkit-text-stroke-color: #0bb644;
 }
 ::placeholder{
-    color: #e5e5e5;
+	color: #07cad1; 
+    /*color: #e5e5e5;*/
 	text-align: center;
 	font-size: 1em;
 	
 }
-button{
+button[type="submit"],button[type="reset"]{
     margin-top: 50px;
     width: 100%;
     background-color: #0bb644;
@@ -2250,9 +2254,15 @@ button{
     border-radius: 10px;
     cursor: pointer;
 }
-button:hover {background-color: #b62121}
-#logbutton {background-color: #07cad1;}
-#logbutton:hover{background-color: #79ffff;}
+button[type="reset"]:hover{
+	background-color: #b62121
+}
+#logbutton {
+	background-color: #07cad1;
+}
+#logbutton:hover{
+	background-color: #79ffff;
+}
 
 .loginheader h1{
 	font-family: 'Poppins',sans-serif;
@@ -2271,7 +2281,7 @@ button:hover {background-color: #b62121}
 
 @media screen and (max-width: 736px) {
 
-	form{
+	#logform{
 		height: 500px;
 		width: 450px;
 	}
@@ -2285,14 +2295,18 @@ button:hover {background-color: #b62121}
 
 @media screen and (max-width: 500px) {
 
-	form{
+	#logform{
 		height: 400px;
-		width: 350px;
+		width: 250px;
 	}
 
 	.loginheader h1{
 		font-size: 5em;
 		margin: 50px;
 		padding: 40px;
+	}
+	#username,#password{
+		height: 40px;
+		font-size: 15px;
 	}
 }
