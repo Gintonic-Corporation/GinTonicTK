@@ -2277,3 +2277,21 @@ button:hover {background-color: #b62121}
 		padding: 40px;
 	}
 }
+
+@media screen and (max-width: 500px) {
+
+	form{
+		height: 400px;
+		width: 250px;
+	}
+
+	.loginheader h1{
+		font-size: 5em;
+		margin: 50px;
+		padding: 40px;
+	}
+	input{
+		height: 40px;
+		font-size: 15px;
+	}
+}
