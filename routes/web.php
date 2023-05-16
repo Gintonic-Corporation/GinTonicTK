@@ -15,7 +15,10 @@ use App\Http\Controllers\CustomerController;
 */
 
 Route::get('/', function () {
-    return view('login');
+    return view('welcome');
+});
+Route::get('/contact', function () {
+    return view('search');
 });
 
 
