@@ -16,7 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('customerID');
             $table->unsignedBigInteger('filmID');
             $table->date('out');
-            $table->date('in');
+            $table->date('in')->nullable();
             $table->timestamps();
 
             $table->foreign('customerID')->references('id')->on('Customers')->onDelete('Cascade');

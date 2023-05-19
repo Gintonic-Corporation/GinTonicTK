@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\FilmController;
+use App\Http\Controllers\BorrowController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +27,4 @@ Route::get('/contact', function () {
 Route::post('/login', 'LoginController@login');
 Route::resource('customer', CustomerController::class);
 Route::resource('film', FilmController::class);
+Route::resource('borrow', BorrowController::class);
