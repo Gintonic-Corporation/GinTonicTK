@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\FilmController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,4 @@ Route::get('/contact', function () {
 
 Route::post('/login', 'LoginController@login');
 Route::resource('customer', CustomerController::class);
+Route::resource('film', FilmController::class);

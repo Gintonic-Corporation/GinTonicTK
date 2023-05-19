@@ -15,6 +15,7 @@ return new class extends Migration
         update films set available=false where id=NEW.filmID;');
         DB::unprepared('create trigger visszavetel after update on borrows for each row
         update films set available=true where id=NEW.filmID and NEW.out is not null;');
+        DB::unprepared('CREATE TRIGGER szamlalo BEFORE INSERT ON borrows FOR EACH ROW UPDATE customers set customers.rank=(select count(*) from borrows where customers.id=NEW.customerID) where customers.id=NEW.customerID;');
     }
 
     /**
@@ -24,5 +25,6 @@ return new class extends Migration
     {
         DB::unprepared('drop trigger kolcsonadas;');
         DB::unprepared('drop trigger visszavetel;');
+        DB::unprepared('drop trigger szamlalo;');
     }
 };

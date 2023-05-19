@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Film extends Model
 {
     use HasFactory;
-    protected $fillabe=[
+    protected $fillable=[
         'title','director','star','category','ptype','available'
     ];
 }
