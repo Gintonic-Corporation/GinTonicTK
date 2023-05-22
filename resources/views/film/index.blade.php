@@ -19,7 +19,7 @@
 				<!-- Main -->
 					<div id="main">
 
-						<a href="/film/create">NEW</a>
+						<a href="/film/create" class="button">NEW</a>
 <table>
     <tr>
         <th>ID</th>
@@ -36,13 +36,13 @@
     <?php $aval="Nem"; if ($film->available==1) $aval = "Igen";?>
     <tr>
         <td>{{$film->id}}</td>
-        <td><a href="/film/{{$film->id}}">{{$film->title}}</a></td>
+        <td><a href="/film/{{$film->id}}" id="decc2">{{$film->title}}</a></td>
         <td>{{$film->director}}</td>
         <td>{{$film->star}}</td>
         <td>{{$film->category}}</td>
         <td>{{$film->ptype}}</td>
         <td><?php echo $aval ?></td>
-        <td> <a href="/film/{{$film->id}}/edit">Edit</a></td>
+        <td> <a href="/film/{{$film->id}}/edit" id="decc2">Edit</a></td>
     </tr>
     @endforeach
 </table>

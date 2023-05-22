@@ -45,7 +45,7 @@
 				<!-- Main -->
 					<div id="main">
 
-						<a href="/customer/create">NEW</a>
+						<a href="/customer/create" class="button">NEW</a>
 <table>
     <tr>
         <th>ID</th>
@@ -59,11 +59,11 @@
     @foreach($customers as $customer)
     <tr>
         <td>{{$customer->id}}</td>
-        <td><a href="/customer/{{$customer->id}}">{{$customer->name}}</a></td>
+        <td><a href="/customer/{{$customer->id}}" id="decc2">{{$customer->name}}</a></td>
         <td>{{$customer->address}}</td>
         <td>{{$customer->contact}}</td>
         <td>{{$customer->rank}}</td>
-        <td> <a href="/customer/{{$customer->id}}/edit">Edit</a></td>
+        <td> <a href="/customer/{{$customer->id}}/edit" id="decc2">Edit</a></td>
     </tr>
     @endforeach
 </table>

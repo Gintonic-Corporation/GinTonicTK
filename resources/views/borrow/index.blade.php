@@ -19,7 +19,7 @@
 				<!-- Main -->
 					<div id="main">
 
-						<a href="/borrow/create">NEW</a>
+						<a href="/borrow/create" class="button">NEW</a>
 <table>
     <tr>
         <th>ID</th>
@@ -32,12 +32,12 @@
 
     @foreach($borrows as $borrow)
     <tr>
-        <td><a href="/borrow/{{$borrow->id}}">{{$borrow->id}}</a></td>
-        <td><a href="/customer/{{$borrow->customerID}}">{{$borrow->customerID}}</a></td>
-        <td><a href="/film/{{$borrow->filmID}}">{{$borrow->filmID}}</a></td>
+        <td><a href="/borrow/{{$borrow->id}}" id="decc2">{{$borrow->id}}</a></td>
+        <td><a href="/customer/{{$borrow->customerID}}" id="decc2">{{$borrow->customerID}}</a></td>
+        <td><a href="/film/{{$borrow->filmID}}" id="decc2">{{$borrow->filmID}}</a></td>
         <td>{{$borrow->out}}</td>
         <td>{{$borrow->in}}</td>
-        <td> <a href="/borrow/{{$borrow->id}}/edit">Edit</a></td>
+        <td> <a href="/borrow/{{$borrow->id}}/edit" id="decc2">Edit</a></td>
     </tr>
     @endforeach
 </table>

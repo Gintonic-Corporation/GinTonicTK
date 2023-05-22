@@ -1943,7 +1943,17 @@ input, select, textarea {
 		}
 
 /* Main */
-
+	#decc2{
+		text-decoration: none;
+		color: rgba(13, 78, 163, 0.667);
+	}
+	th{
+		font-weight: bold;
+		padding: 5px;
+	}
+	tr,td{
+		padding: 6px;
+	}
 	#main {
 		position: relative;
 		overflow: hidden;
@@ -1954,6 +1964,9 @@ input, select, textarea {
 		-webkit-transition: min-height 0.5s ease-in-out, max-height 0.5s ease-in-out;
 		-ms-transition: min-height 0.5s ease-in-out, max-height 0.5s ease-in-out;
 		transition: min-height 0.5s ease-in-out, max-height 0.5s ease-in-out;
+
+		border-radius: 5px;
+		padding: 10px;
 	}
 
 		#main > .panel {
