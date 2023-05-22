@@ -14,7 +14,7 @@
 		<!-- Wrapper-->
 			<div id="wrapper">
 
-				@include('includes._nav')
+			@include('includes._nav')
 
 				<!-- Main -->
 					<div id="main">
