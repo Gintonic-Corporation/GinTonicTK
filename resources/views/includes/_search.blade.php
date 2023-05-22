@@ -19,7 +19,14 @@
                     <textarea name="message" placeholder="Message" rows="6"></textarea>
                 </div>
                 <div class="col-12">
-
+                <! input type="submit" value="Send Message" />
+                    <button class="button-82-pushable" role="button">
+                        <span class="button-82-shadow"></span>
+                        <span class="button-82-edge"></span>
+                        <span class="button-82-front text">
+                        <a href="/film/create" id="decc">Send Message</a>
+                        </span>
+                        </button>
                 </div>
             </div>
         </div>
