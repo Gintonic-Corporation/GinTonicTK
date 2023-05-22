@@ -12,14 +12,23 @@
 	<body class="is-preload">
 
 		<!-- Wrapper-->
-			<div id="wrapper">
-
-				<p>Név: {{$customer->name}}</p>
-                <p>Lakcím: {{$customer->address}}</p>
-                <p>Elérhetőség: {{$customer->contact}}</p>
-                <p>Rang: {{$customer->rank}}</p>
-                <p><a href="/customer">Vissza</a></p>
-
+			<div class="box">
+				<div class="glass">
+					<div class="detailtext">
+						<b>Név:</b> {{$customer->name}}<br>
+						<b>Lakcím:</b> {{$customer->address}}<br>
+						<b>Elérhetőség:</b> {{$customer->contact}}<br>
+						<b>Rang:</b> {{$customer->rank}}<br>
+						
+						<button class="button-82-pushable" role="button">
+						<span class="button-82-shadow"></span>
+						<span class="button-82-edge"></span>
+						<span class="button-82-front text">
+						<a href="/customer" id="decc">Vissza</a>
+						</span>
+						</button>
+					</div>
+				</div>
 			</div>
 
 		<!-- Scripts -->
