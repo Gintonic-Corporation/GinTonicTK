@@ -19,7 +19,14 @@
 				<!-- Main -->
 					<div id="main">
 
-						<a href="/borrow/create" class="button">NEW</a>
+						
+						<button class="button-82-pushable" role="button">
+						<span class="button-82-shadow"></span>
+						<span class="button-82-edge"></span>
+						<span class="button-82-front text">
+						<a href="/borrow/create" id="decc">NEW</a>
+						</span>
+						</button>
 <table>
     <tr>
         <th>ID</th>

@@ -19,7 +19,7 @@
                     <textarea name="message" placeholder="Message" rows="6"></textarea>
                 </div>
                 <div class="col-12">
-                    <input type="submit" value="Send Message" />
+
                 </div>
             </div>
         </div>

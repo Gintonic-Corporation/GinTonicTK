@@ -2000,7 +2000,8 @@ input, select, textarea {
 		border-radius: 12px;
 		font-size: 1.1rem;
 		color: white;
-		background: rgb(17, 145, 70);
+		/*background: rgb(17, 145, 70);*/
+		background: linear-gradient(#19DBED,#0FF95C);
 		will-change: transform;
 		transform: translateY(-4px);
 		transition:
@@ -2400,7 +2401,10 @@ button[type="reset"]:hover{
 		margin: 50px;
 		padding: 40px;
 	}
-
+	.glass {
+		width: 450px;
+		height: 350px;
+	}
 }
 
 @media screen and (max-width: 500px) {
@@ -2419,11 +2423,15 @@ button[type="reset"]:hover{
 		height: 40px;
 		font-size: 15px;
 	}
+	.glass {
+		width: 450px;
+		height: 350px;
+	}
 }
 /* Customer, Borrow, Film */
 #decc{
 	text-decoration: none;
-	color: #fff;
+	color: #000;
 }
 
   
@@ -2441,8 +2449,8 @@ button[type="reset"]:hover{
 
 
 .glass {
-	width: 450px;
-	height: 350px;
+	width: 650px;
+	height: 550px;
 	backdrop-filter: blur (10px);
 	border-radius: 30px;
 	background: linear-gradient(100deg, rgba(0,0,0,.2),rgba(0,0,0,.2));
