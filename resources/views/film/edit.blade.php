@@ -14,7 +14,9 @@
 		<!-- Wrapper-->
 			<div id="wrapper">
 
-				<form action="/film/{{$film->id}}" method="post">
+            <div class="box">
+                <div class="glass2">
+                <form action="/film/{{$film->id}}" method="post">
                     @csrf
                     @method('put')
                     <label for="title">Cím: </label>
@@ -30,21 +32,34 @@
                     <input type="text" name="category" id="category" value="{{$film->category}}">
                     <br>
                     <label for="ptype">Adathordozó: </label><br>
-                    <?php if($film->ptype=="Videokazetta") echo '<input type="radio" name="ptype" id="ptype" value="CD/DVD">CD/DVD<br>
-                    <input type="radio" name="ptype" id="ptype" value="Videokazetta" checked>Videokazetta<br>';
-                    else echo'<input type="radio" name="ptype" id="ptype" value="CD/DVD" checked>CD/DVD<br>
-                    <input type="radio" name="ptype" id="ptype" value="Videokazetta">Videokazetta<br>';?>
-                    {{-- <input type="radio" name="ptype" id="ptype" value="CD/DVD">CD/DVD<br>
-                    <input type="radio" name="ptype" id="ptype" value="Videokazetta">Videokazetta<br> --}}
+                    <?php if($film->ptype=="Videokazetta") echo ' <label class="container2">Videokazetta
+                            <input name="ptype" type="checkbox" checked>
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container2">CD/DVD
+                            <input name="ptype" type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>';
+                    else echo' <label class="container2">Videokazetta
+                    <input name="ptype" type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container2">CD/DVD
+                    <input name="ptype" type="checkbox" checked>
+                    <span class="checkmark"></span>
+                </label>';?>
+                       
                     <input type="submit" value="Frissítés">
-                </form>
-
-                <form action="/film/{{$film->id}}" method="post">
+                    <form action="/film/{{$film->id}}" method="post">
                     @csrf
                     @method('delete')
                     <input type="submit" value="Törlés">
                 </form>
-
+                </form>
+                
+                </div>
+            </div>			
+                
 			</div>
 
 		<!-- Scripts -->

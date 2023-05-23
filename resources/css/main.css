@@ -2405,6 +2405,10 @@ button[type="reset"]:hover{
 		width: 450px;
 		height: 350px;
 	}
+	.glass2 {
+		width: 500px;
+		height: 500px;
+	}
 }
 
 @media screen and (max-width: 500px) {
@@ -2427,13 +2431,16 @@ button[type="reset"]:hover{
 		width: 450px;
 		height: 350px;
 	}
+	.glass2 {
+		width: 400px;
+		height: 500px;
+	}
 }
 /* Customer, Borrow, Film */
 #decc{
 	text-decoration: none;
 	color: #000;
 }
-
   
 /*kornel yt*/
 .box {
@@ -2462,7 +2469,78 @@ button[type="reset"]:hover{
 	line-height: 2em;
 }
 
+.glass2 {
+	width: 1000px;
+	height: 1000px;
+	backdrop-filter: blur (10px);
+	border-radius: 30px;
+	background: linear-gradient(100deg, rgba(0,0,0,.2),rgba(0,0,0,.2));
+	box-shadow: 0 10px 26px rgba(0,0,0,0.50);
+	color: #fff;
+	padding: 50px;
+}
 
+.container2 {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
+.container2 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
 
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
 
+.container2:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.container2 input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container2 input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container2 .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+#resf{
+	width: 0;
+	height: 0;
+	background-color: transparent;
+	color: transparent;
+	z-index: -1;
+}
