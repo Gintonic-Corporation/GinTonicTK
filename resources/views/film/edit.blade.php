@@ -53,7 +53,8 @@
                 <form action="/film/{{$film->id}}" method="post">
                     @csrf
                     @method('delete')
-                    <input type="submit" value="Törlés" style="float: right">
+                    <?php if($film->available==1) echo'<input type="submit" value="Törlés" style="float: right">'; ?>
+
                 </form>
 
                 </div>
