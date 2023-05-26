@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Borrow;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class BorrowController extends Controller
 {
@@ -25,6 +26,32 @@ class BorrowController extends Controller
 
     public function store()
     {
+        $filmIN=DB::table('films')
+        ->select('available')
+        ->where('id','=',request('filmID'))
+        ->value('available');
+
+        if($filmIN==0)
+            return redirect('/borrow/fail');
+
+        $taken=DB::table('borrows')
+        ->select(DB::raw('count(ID)'))
+        ->where('customerID','=',request('customerID'))
+        ->whereNull('in')
+        ->groupBy('customerID')
+        ->value('count(ID)');
+        if(is_null($taken)) $taken=0;
+
+        $rang=DB::table('customers')
+        ->select('rank')
+        ->where('ID','=',request('customerID'))
+        ->value('rank');
+        $maxBorrow=0;
+        if($rang<5) $maxBorrow=1;
+        if($rang/5==1) $maxBorrow=2;
+        if($rang/5==2) $maxBorrow=3;
+        if($rang>=15) $maxBorrow=4;
+        if($maxBorrow>$taken){
         Borrow::create([
             'customerID' => request('customerID'),
             'filmID' => request('filmID'),
@@ -32,6 +59,13 @@ class BorrowController extends Controller
             'in' => request('in')
         ]);
         return redirect('/borrow');
+        }
+        else{
+            // echo $taken;
+            // echo $maxBorrow;
+            // echo $rang;
+            return redirect('/borrow/fail');
+        }
     }
 
     public function edit(Borrow $borrow)
@@ -53,6 +87,14 @@ class BorrowController extends Controller
     public function destroy(Borrow $borrow)
     {
         $borrow->delete();
+        return redirect('/borrow');
+    }
+
+    public function instantReturn(Borrow $borrow)
+    {
+        $borrow->update([
+            'in' => date("Y-m-d")
+        ]);
         return redirect('/borrow');
     }
 }

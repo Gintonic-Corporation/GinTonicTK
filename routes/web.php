@@ -25,7 +25,10 @@ Route::get('/contact', function () {
 Route::get('/login', function () {
     return view('login');
 });
-
+Route::get('/borrow/instantReturn/{borrow}', [BorrowController::class, 'instantReturn']);
+Route::get('/borrow/fail', function () {
+    return view('borrow.fail');
+});
 
 Route::post('/login', 'LoginController@login');
 Route::resource('customer', CustomerController::class);

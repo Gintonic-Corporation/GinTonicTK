@@ -25,8 +25,8 @@
     <label for="contact">Elérhetőség: </label>
     <input type="text" name="contact" id="contact" value="{{$customer->contact}}">
     <br>
-    <label for="rank">Rang: </label>
-    <input type="number" name="rank" id="rank" value="{{$customer->rank}}">
+    {{-- <label for="rank">Rang: </label>
+    <input type="number" name="rank" id="rank" value="{{$customer->rank}}"> --}}
     <br>
     <input type="submit" value="Frissítés">
 </form>

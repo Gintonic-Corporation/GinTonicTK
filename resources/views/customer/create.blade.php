@@ -26,9 +26,9 @@
                     <label for="contact">Elérhetőség: </label>
                     <input type="text" name="contact" id="contact">
                     <br>
-                    <label for="rank">Rang: </label>
+                    {{-- <label for="rank">Rang: </label>
                     <input type="number" name="rank" id="rank">
-                    <br>
+                    <br> --}}
                     <input type="submit" value="Mentés">
                 </form>
 

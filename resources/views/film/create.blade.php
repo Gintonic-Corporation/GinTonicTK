@@ -27,13 +27,13 @@
                         <input type="text" name="star" id="star">
                         <label for="category">Műfaj: </label>
                         <input type="text" name="category" id="category">
-                        <label for="ptype">Adathordozó: </label>                    
+                        <label for="ptype">Adathordozó: </label>
                         <label class="container2">Videokazetta
-                            <input name="ptype" type="checkbox">
+                            <input name="ptype" type="radio" value="Videokazetta">
                             <span class="checkmark"></span>
                         </label>
                         <label class="container2">CD/DVD
-                            <input name="ptype" type="checkbox">
+                            <input name="ptype" type="radio" value="CD/DVD" checked>
                             <span class="checkmark"></span>
                         </label>
                         <br>

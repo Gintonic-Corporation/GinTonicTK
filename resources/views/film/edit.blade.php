@@ -31,35 +31,34 @@
                     <label for="category">Műfaj: </label>
                     <input type="text" name="category" id="category" value="{{$film->category}}">
                     <br>
-                    <label for="ptype">Adathordozó: </label><br>
+                    <label for="ptype">Adathordozó: </label>
                     <?php if($film->ptype=="Videokazetta") echo ' <label class="container2">Videokazetta
-                            <input name="ptype" type="checkbox" checked>
+                            <input name="ptype" type="radio" value="Videokazetta" checked>
                             <span class="checkmark"></span>
                         </label>
                         <label class="container2">CD/DVD
-                            <input name="ptype" type="checkbox">
+                            <input name="ptype" type="radio" value="CD/DVD">
                             <span class="checkmark"></span>
                         </label>';
                     else echo' <label class="container2">Videokazetta
-                    <input name="ptype" type="checkbox">
+                    <input name="ptype" type="radio" value="Videokazetta">
                     <span class="checkmark"></span>
                 </label>
                 <label class="container2">CD/DVD
-                    <input name="ptype" type="checkbox" checked>
+                    <input name="ptype" type="radio" value="CD/DVD" checked>
                     <span class="checkmark"></span>
                 </label>';?>
-                       
-                    <input type="submit" value="Frissítés">
-                    <form action="/film/{{$film->id}}" method="post">
+                    <input type="submit" value="Frissítés" style="float: left">
+                </form>
+                <form action="/film/{{$film->id}}" method="post">
                     @csrf
                     @method('delete')
-                    <input type="submit" value="Törlés">
+                    <input type="submit" value="Törlés" style="float: right">
                 </form>
-                </form>
-                
+
                 </div>
-            </div>			
-                
+            </div>
+
 			</div>
 
 		<!-- Scripts -->

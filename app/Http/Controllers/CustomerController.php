@@ -29,7 +29,7 @@ class CustomerController extends Controller
             'name' => request('name'),
             'address' => request('address'),
             'contact' => request('contact'),
-            'rank' => request('rank')
+            'rank' => 0
         ]);
         return redirect('/customer');
     }
@@ -44,8 +44,7 @@ class CustomerController extends Controller
         $customer->update([
             'name' => request('name'),
             'address' => request('address'),
-            'contact' => request('contact'),
-            'rank' => request('rank')
+            'contact' => request('contact')
         ]);
         return redirect('/customer');
     }

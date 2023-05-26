@@ -11,17 +11,37 @@
         @vite('resources/css/main.css')
 	</head>
 	<body class="is-preload">
-
+        <?php
+            $filmData=DB::table('films')
+                ->select('*')
+                ->where('available','=',1)
+                ->get();
+            $customerData=DB::table('customers')
+                ->select('*')
+                ->get();
+        ?>
 		<!-- Wrapper-->
 			<div id="wrapper">
 
 				<form action="/borrow" method="post">
                     @csrf
                     <label for="customerID">Kölcsönző azonosítója: </label>
-                    <input type="text" name="customerID" id="customerID">
+                    <select class="form-control" name="customerID">
+                        @foreach ($customerData as $customer)
+                            <option value="{{ $customer->id }}">
+                                [{{ $customer->id }}]  {{ $customer->name }} {{ $customer->address }}
+                            </option>
+                        @endforeach
+                    </select>
                     <br>
                     <label for="filmID">Film azonosítója: </label>
-                    <input type="text" name="filmID" id="filmID">
+                    <select class="form-control" name="filmID">
+                        @foreach ($filmData as $film)
+                            <option value="{{ $film->id }}">
+                                [{{ $film->id }}]  {{ $film->title }} {{ $film->director }}
+                            </option>
+                        @endforeach
+                    </select>
                     <br>
                     <label for="out">Kiadva: </label>
                     <input type="date" name="out" id="out" value="<?php echo date('Y-m-d'); ?>" />

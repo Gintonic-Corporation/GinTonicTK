@@ -19,7 +19,7 @@
 				<!-- Main -->
 					<div id="main">
 
-						
+
 						<button class="button-82-pushable" role="button">
 						<span class="button-82-shadow"></span>
 						<span class="button-82-edge"></span>
@@ -44,7 +44,7 @@
         <td><a href="/film/{{$borrow->filmID}}" id="decc2">{{$borrow->filmID}}</a></td>
         <td>{{$borrow->out}}</td>
         <td>{{$borrow->in}}</td>
-        <td> <a href="/borrow/{{$borrow->id}}/edit" id="decc2">Edit</a></td>
+        <td> <a href="/borrow/{{$borrow->id}}/edit" id="decc2">Edit    </a><a href="/borrow/instantReturn/{{$borrow->id}}" class="icon solid fa-id-card"><span>Visszahozva</span></a></td>
     </tr>
     @endforeach
 </table>

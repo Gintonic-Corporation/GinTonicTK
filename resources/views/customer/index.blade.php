@@ -65,11 +65,15 @@
 
     @foreach($customers as $customer)
     <tr>
+        <?php $rang=""; if($customer->rank<5) $rang="Tébolygó";
+        if($customer->rank/5==1) $rang="Megtért";
+        if($customer->rank/5==2) $rang="Szárnyas";
+        if($customer->rank>=15) $rang="Örök fanatikus"; ?>
         <td>{{$customer->id}}</td>
         <td><a href="/customer/{{$customer->id}}" id="decc2">{{$customer->name}}</a></td>
         <td>{{$customer->address}}</td>
         <td>{{$customer->contact}}</td>
-        <td>{{$customer->rank}}</td>
+        <td>{{$rang}}</td>
         <td> <a href="/customer/{{$customer->id}}/edit" id="decc2">Edit</a></td>
     </tr>
     @endforeach
