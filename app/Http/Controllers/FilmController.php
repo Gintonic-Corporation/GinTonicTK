@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Film;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class FilmController extends Controller
 {
@@ -57,5 +58,26 @@ class FilmController extends Controller
     {
         $film->delete();
         return redirect('/film');
+    }
+
+    public function search()
+    {
+        $keyword='%'.request('keyword').'%';
+        $key=request('key');
+        $films = DB::table('films')
+        ->select('title','director','star','category', DB::raw("count(id) as db"))
+        ->where($key,'like',$keyword)
+        ->groupBy('title','director','star','category')
+        ->get();
+        return view('film.search', compact('films'));
+    }
+    public function result(string $selectedTitle,string $selectedDirector)
+    {
+        $films = DB::table('films')
+        ->select('*')
+        ->where('title','like',$selectedTitle)
+        ->where('director','like',$selectedDirector)
+        ->get();
+        return view('film.result', compact('films'));
     }
 }

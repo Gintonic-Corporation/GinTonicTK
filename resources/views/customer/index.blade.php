@@ -51,8 +51,18 @@
 						<span class="button-82-front text">
 						<a href="/customer/create" id="decc">NEW</a>
 						</span>
-						</button>
-<table>
+					</button>
+                    <form action="/customer/search" method="post">
+                        @csrf
+
+                        <input type="text" placeholder="Keresés" name="keyword" id="keyword">
+                        <select class="form-control" name="key" id="key">
+                            <option value="name">Név</option>
+                            <option value="address">Lakcím</option>
+                            <option value="created_at">Első bejelentkezés</option>
+                        </select>
+                        <input type="submit" value="Keresés" style="float: right">
+                    </form>
 <table>
     <tr>
         <th>ID</th>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Customer;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CustomerController extends Controller
 {
@@ -53,5 +54,16 @@ class CustomerController extends Controller
     {
         $customer->delete();
         return redirect('/customer');
+    }
+
+    public function search()
+    {
+        $keyword='%'.request('keyword').'%';
+        $key=request('key');
+        $customers = DB::table('customers')
+        ->select('*')
+        ->where($key,'like',$keyword)
+        ->get();
+        return view('customer.search', compact('customers'));
     }
 }

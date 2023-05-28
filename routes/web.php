@@ -29,8 +29,11 @@ Route::get('/borrow/instantReturn/{borrow}', [BorrowController::class, 'instantR
 Route::get('/borrow/fail', function () {
     return view('borrow.fail');
 });
+Route::post('/customer/search', [CustomerController::class, 'search']);
+Route::post('/film/search', [FilmController::class, 'search']);
+Route::get('/film/result/{selectedTitle}-{selectedDirector}', [FilmController::class, 'result']);
 
-Route::post('/login', 'LoginController@login');
+// Route::post('/login', 'LoginController@login');
 Route::resource('customer', CustomerController::class);
 Route::resource('film', FilmController::class);
 Route::resource('borrow', BorrowController::class);

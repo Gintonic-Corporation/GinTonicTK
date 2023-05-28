@@ -13,32 +13,8 @@
 
 		<!-- Wrapper-->
 			<div id="wrapper">
-
-			@include('includes._nav')
-
 				<!-- Main -->
 					<div id="main">
-
-                    <button class="button-82-pushable" role="button">
-						<span class="button-82-shadow"></span>
-						<span class="button-82-edge"></span>
-						<span class="button-82-front text">
-						<a href="/film/create" id="decc">NEW</a>
-						</span>
-					</button>
-                    <form action="/film/search" method="post">
-                        @csrf
-                        <input type="text" placeholder="Keresés" name="keyword" id="keyword">
-                        <select class="form-control" name="key" id="key">
-                            <option value="title">Cím</option>
-                            <option value="director">Rendező</option>
-                            <option value="star">Főszereplő</option>
-                            <option value="category">Műfaj</option>
-                            <option value="created_at">Beszerzés időpontja</option>
-                        </select>
-                        <input type="submit" value="Keresés" style="float: right">
-                    </form>
-<table>
 <table>
     <tr>
         <th>ID</th>
