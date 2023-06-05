@@ -95,6 +95,24 @@ class BorrowController extends Controller
         $borrow->update([
             'in' => date("Y-m-d")
         ]);
+        $rang=DB::table('customers')
+        ->select('rank')
+        ->where('ID','=',$borrow->customerID)
+        ->value('rank');
+        $borrowPeriod=0;
+        if($rang<5) $borrowPeriod=2*3600*24;
+        if(intdiv($rang,5)==1) $borrowPeriod=3*3600*24;
+        if(intdiv($rang,5)==2) $borrowPeriod=5*3600*24;
+        if($rang>=15) $borrowPeriod=10*3600*24;
+        $period=strtotime(date("Y-m-d"))-strtotime($borrow->out);
+        //$fee=(strtotime(date("Y-m-d"))-strtotime($period))/(24*60*60)*500;
+        //$fee=min($fee,5000);
+        if($period>$borrowPeriod)
+        {
+            $fee=(($period-$borrowPeriod)/(3600*24)-2)*500;
+            $fee=min($fee,5000);
+            return redirect('/borrow')->with('success',$fee);
+        }
         return redirect('/borrow');
     }
 }

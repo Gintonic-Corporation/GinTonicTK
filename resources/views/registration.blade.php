@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-		<title>GinTonicTK LOGIN</title>
+		<title>GinTonicTK Regisztráció</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		{{-- <link rel="icon" href="public/favicon.ico" type="image/x-icon"/> --}}
@@ -15,15 +15,17 @@
         <div class="loginheader">
             <h1>GinTonicTK</h1>
         </div>
-        @if ($message=Session::get('success'))
-            <div class="alert alert-info">{{$message}}</div>
-        @endif
         <div class="loginmain">
-            <form action="{{route('login.validate_login')}}" method="POST" id="logform">
+            <form action="{{ route('login.validate_registration') }}" method="POST" id="logform">
                 @csrf
-                <input type="text" id="name" name="name" placeholder="Felhasználónlév">
+                <input type="text" id="username" name="name" placeholder="Felhasználónlév">
                 @if($errors->has('name'))
                     <span class="text-danger">{{$errors->first('name')}}</span>
+                @endif
+                <br>
+                <input type="text" id="email" name="email" placeholder="E-mail cím">
+                @if($errors->has('email'))
+                    <span class="text-danger">{{$errors->first('email')}}</span>
                 @endif
                 <br>
                 <input type="password" id="password" name="password" placeholder="Jelszó">
@@ -31,7 +33,7 @@
                     <span class="text-danger">{{$errors->first('password')}}</span>
                 @endif
                 <br>
-                <button type="submit" id="logbutton">Bejelentkezés</button>
+                <button type="submit" id="logbutton">Regisztráció</button>
                 <button type="reset">Törlés</button>
             </form>
 

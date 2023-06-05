@@ -10,7 +10,9 @@
         @vite('resources/css/main.css')
 	</head>
 	<body class="is-preload">
-
+        @if($message=Session::get('success'))
+        <script type="text/javascript">alert("Fizetendő késedelmi díj: "+{{$message}})</script>
+        @endif
 		<!-- Wrapper-->
 			<div id="wrapper">
 
