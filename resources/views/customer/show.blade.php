@@ -48,7 +48,7 @@
                         </select>
                         <select class="form-control" name="customerID">
                             <option>Korábbi kölcsönzések([id] Filmcím [filmID] Kölcsönzés-Visszavétel)</option>
-                            @foreach ($data1 as $data)
+                            @foreach ($data2 as $data)
                                 <option value="{{ $data->bid }}">
                                     [{{ $data->bid }}]  {{ $data->title }} [{{$data->fid}}] {{ $data->bout }} - {{date("Y-m-d",strtotime($data->bout)+$borrowPeriod)}}
                                 </option>
