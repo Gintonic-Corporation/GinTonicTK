@@ -21,7 +21,7 @@
         <div class="loginmain">
             <form action="{{route('login.validate_login')}}" method="POST" id="logform">
                 @csrf
-                <input type="text" id="name" name="name" placeholder="Felhasználónlév">
+                <input type="text" id="username" name="name" placeholder="Felhasználónlév">
                 @if($errors->has('name'))
                     <span class="text-danger">{{$errors->first('name')}}</span>
                 @endif

@@ -13,7 +13,9 @@
 	<body class="is-preload">
 
 		<!-- Wrapper-->
-			<div id="wrapper">
+        <div id="wrapper">
+            <div class="box">
+                <div class="glass3">
 
 				<form action="/customer" method="post">
                     @csrf
@@ -29,10 +31,23 @@
                     {{-- <label for="rank">Rang: </label>
                     <input type="number" name="rank" id="rank">
                     <br> --}}
-                    <input type="submit" value="Mentés">
+                    <!input type="submit" value="Mentés">
+                    <button class="button-82-pushable"role="button" value="Mentés">
+                            <span class="button-82-shadow"></span>
+                            <span class="button-82-edge"></span>
+                            <span class="button-82-front text">Mentés
+                            </span>
+                        </button>
+                        <button class="button-82-pushable" value="clear" onclick="clear()">
+                            <span class="button-82-shadow"></span>
+                            <span class="button-82-edge"></span>
+                            <span class="button-82-front text">Törlés
+                            </span>
+                        </button>
                 </form>
-
-			</div>
+                </form>
+                </div>
+            </div>
 
 		<!-- Scripts -->
 			@include('includes._scripts')

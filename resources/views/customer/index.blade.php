@@ -55,7 +55,7 @@
                     <form action="/customer/search" method="post">
                         @csrf
 
-                        <input type="text" placeholder="Keresés" name="keyword" id="keyword">
+                        <input type="text" placeholder="Keresés" name="keyword" id="username">
                         <select class="form-control" name="key" id="key">
                             <option value="name">Név</option>
                             <option value="address">Lakcím</option>

@@ -38,7 +38,7 @@
                         </label>
                         <br>
                         <! input type="submit" value="Mentés">
-                        <button class="button-82-pushable" role="button" value="Mentés">
+                        <button class="button-82-pushable"role="button" value="Mentés">
                             <span class="button-82-shadow"></span>
                             <span class="button-82-edge"></span>
                             <span class="button-82-front text">Mentés

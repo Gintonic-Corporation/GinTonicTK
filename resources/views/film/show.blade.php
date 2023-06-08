@@ -12,16 +12,26 @@
 	<body class="is-preload">
         <?php $aval="Nem"; if ($film->available==1) $aval = "Igen";?>
 		<!-- Wrapper-->
-			<div id="wrapper">
+		<div class="box">
+				<div class="glass">
+					<div class="detailtext">
 
-				<p>Cím: {{$film->title}}</p>
-                <p>Rendező: {{$film->director}}</p>
-                <p>Főszereplő: {{$film->star}}</p>
-                <p>Műfaj: {{$film->category}}</p>
-                <p>Adathordozó: {{$film->ptype}}</p>
-                <p>Kölcsönözhető: <?php echo $aval ?></p>
-                <p><a href="/film">Vissza</a></p>
+					<b>Cím:</b> {{$film->title}}<br>
+					<b>Rendező:</b> {{$film->director}}<br>
+					<b>Főszereplő:</b> {{$film->star}}<br>
+					<b>Műfaj:</b> {{$film->category}}<br>
+					<b>Adathordozó:</b> {{$film->ptype}}<br>
+					<b>Kölcsönözhető:</b> <?php echo $aval ?><br>
+				<button class="button-82-pushable" role="button">
+						<span class="button-82-shadow"></span>
+						<span class="button-82-edge"></span>
+						<span class="button-82-front text">
+						<a href="/film" id="decc">Vissza</a>
+						</span>
+						</button>
 
+						</div>
+				</div>
 			</div>
 
 		<!-- Scripts -->

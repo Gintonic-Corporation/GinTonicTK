@@ -1952,7 +1952,8 @@ input, select, textarea {
 		position: relative;
 		border: none;
 		background: transparent;
-		padding: 0;
+		padding: 0px;
+		margin: 3%;
 		cursor: pointer;
 		outline-offset: 4px;
 		transition: filter 250ms;
@@ -2301,6 +2302,19 @@ input, select, textarea {
 
 		}
 /* Login */
+.alert{
+	align-items: center;
+	color: red;
+	font-weight: 500;
+	padding: 50px;
+	width: 30%;
+	margin-left: 38%;
+	margin-right: 38%;
+	margin-top: 31%;
+	z-index: 2;
+}
+
+
 *:before,
 *:after{
     padding: 0;
@@ -2409,6 +2423,10 @@ button[type="reset"]:hover{
 		width: 500px;
 		height: 500px;
 	}
+	.glass3 {
+		width: 500px;
+		height: 400px;
+	}
 }
 
 @media screen and (max-width: 500px) {
@@ -2434,6 +2452,10 @@ button[type="reset"]:hover{
 	.glass2 {
 		width: 400px;
 		height: 500px;
+	}
+	.glass3 {
+		width: 400px;
+		height: 300px;
 	}
 }
 /* Customer, Borrow, Film */
@@ -2472,6 +2494,17 @@ button[type="reset"]:hover{
 .glass2 {
 	width: 1000px;
 	height: 1000px;
+	backdrop-filter: blur (10px);
+	border-radius: 30px;
+	background: linear-gradient(100deg, rgba(0,0,0,.2),rgba(0,0,0,.2));
+	box-shadow: 0 10px 26px rgba(0,0,0,0.50);
+	color: #fff;
+	padding: 50px;
+}
+
+.glass3 {
+	width: 1000px;
+	height: 600px;
 	backdrop-filter: blur (10px);
 	border-radius: 30px;
 	background: linear-gradient(100deg, rgba(0,0,0,.2),rgba(0,0,0,.2));
