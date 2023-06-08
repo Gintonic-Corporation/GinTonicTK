@@ -2479,7 +2479,7 @@ button[type="reset"]:hover{
 
 .glass {
 	width: 650px;
-	height: 550px;
+	height: 600px;
 	backdrop-filter: blur (10px);
 	border-radius: 30px;
 	background: linear-gradient(100deg, rgba(0,0,0,.2),rgba(0,0,0,.2));
@@ -2512,6 +2512,8 @@ button[type="reset"]:hover{
 	color: #fff;
 	padding: 50px;
 }
+
+
 
 .container2 {
   display: block;

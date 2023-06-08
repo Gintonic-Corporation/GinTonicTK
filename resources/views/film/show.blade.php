@@ -13,26 +13,24 @@
         <?php $aval="Nem"; if ($film->available==1) $aval = "Igen";?>
 		<!-- Wrapper-->
 		<div class="box">
-				<div class="glass">
-					<div class="detailtext">
-
+			<div class="glass">
+				<div class="detailtext">
 					<b>Cím:</b> {{$film->title}}<br>
 					<b>Rendező:</b> {{$film->director}}<br>
 					<b>Főszereplő:</b> {{$film->star}}<br>
 					<b>Műfaj:</b> {{$film->category}}<br>
 					<b>Adathordozó:</b> {{$film->ptype}}<br>
 					<b>Kölcsönözhető:</b> <?php echo $aval ?><br>
-				<button class="button-82-pushable" role="button">
+					<button class="button-82-pushable" role="button">
 						<span class="button-82-shadow"></span>
 						<span class="button-82-edge"></span>
 						<span class="button-82-front text">
 						<a href="/film" id="decc">Vissza</a>
 						</span>
-						</button>
-
-						</div>
+					</button>
 				</div>
 			</div>
+		</div>
 
 		<!-- Scripts -->
 			@include('includes._scripts')

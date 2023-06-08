@@ -45,10 +45,9 @@
                             </span>
                         </button>
                 </form>
-                </form>
                 </div>
             </div>
-
+                    </div>
 		<!-- Scripts -->
 			@include('includes._scripts')
 

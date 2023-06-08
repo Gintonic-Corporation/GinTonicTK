@@ -12,7 +12,10 @@
 	<body class="is-preload">
 
 		<!-- Wrapper-->
-			<div id="wrapper">
+        <div id="wrapper">
+
+<div class="box">
+    <div class="glass2">
 
 				<form action="/borrow/{{$borrow->id}}" method="post">
                     @csrf
@@ -36,6 +39,10 @@
                     @method('delete')
                     <input type="submit" value="Törlés">
                 </form>
+
+			
+                </div>
+            </div>
 
 			</div>
 

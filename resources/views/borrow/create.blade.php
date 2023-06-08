@@ -21,7 +21,9 @@
                 ->get();
         ?>
 		<!-- Wrapper-->
-			<div id="wrapper">
+        <div id="wrapper">
+            <div class="box">
+                <div class="glass3">
 
 				<form action="/borrow" method="post">
                     @csrf
@@ -53,6 +55,8 @@
                 </form>
 
 			</div>
+            </div>
+            </div>
 
 		<!-- Scripts -->
 			@include('includes._scripts')
