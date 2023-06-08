@@ -11,7 +11,7 @@
 		$wrapper = $('#wrapper'),
 		$main = $('#main'),
 		$panels = $main.children('.panel'),
-		$nav = $('#nav'), $nav_links = $nav.children('a');
+		$nav = $('_nav'), $nav_links = $nav.children('a');
 
 	// Breakpoints.
 		breakpoints({
@@ -36,7 +36,7 @@
 				var href = $(this).attr('href');
 
 				// Not a panel link? Bail.
-					if (href.charAt(0) != '#'
+					if (href.charAt(0) != '/'
 					||	$panels.filter(href).length == 0)
 						return;
 
