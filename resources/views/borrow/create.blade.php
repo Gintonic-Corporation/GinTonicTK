@@ -21,7 +21,6 @@
                 ->get();
         ?>
 		<!-- Wrapper-->
-        <div id="wrapper">
             <div class="box">
                 <div class="glass3">
 
@@ -55,7 +54,6 @@
                 </form>
 
 			</div>
-            </div>
             </div>
 
 		<!-- Scripts -->

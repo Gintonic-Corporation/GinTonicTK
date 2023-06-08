@@ -13,7 +13,6 @@
 	<body class="is-preload">
 
 		<!-- Wrapper-->
-        <div id="wrapper">
             <div class="box">
                 <div class="glass3">
 
@@ -46,7 +45,6 @@
                         </button>
                 </form>
                 </div>
-            </div>
                     </div>
 		<!-- Scripts -->
 			@include('includes._scripts')

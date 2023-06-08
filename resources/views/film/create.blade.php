@@ -14,7 +14,6 @@
 	<body class="is-preload">
 
 		<!-- Wrapper-->
-			<div id="wrapper">
             <div class="box">
                 <div class="glass2">
                     <form action="/film" method="post" id="Form">
@@ -51,7 +50,7 @@
                             </span>
                         </button>
                     </form>
-                </div>
+                
             </div>
 
 			</div>

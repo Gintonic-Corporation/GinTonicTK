@@ -12,7 +12,6 @@
 	<body class="is-preload">
 
 		<!-- Wrapper-->
-<div id="wrapper">
     <div class="box">
         <div class="glass2">
             <form action="/customer/{{$customer->id}}" method="post">
@@ -37,7 +36,6 @@
             </form>
 
 
-        </div>
     </div>
 </div>
 

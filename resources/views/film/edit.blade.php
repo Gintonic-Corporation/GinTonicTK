@@ -12,7 +12,7 @@
 	<body class="is-preload">
 
 		<!-- Wrapper-->
-			<div id="wrapper">
+			
 
             <div class="box">
                 <div class="glass2">
@@ -60,7 +60,7 @@
                 </div>
             </div>
 
-			</div>
+		
 
 		<!-- Scripts -->
 			@include('includes._scripts')

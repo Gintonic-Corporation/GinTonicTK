@@ -28,7 +28,7 @@
 					</button>
                     <form action="/film/search" method="post">
                         @csrf
-                        <input type="text" placeholder="Keresés" name="keyword" id="keyword">
+                        <input type="text" placeholder="Keresés" name="keyword" id="username">
                         <select class="form-control" name="key" id="key">
                             <option value="title">Cím</option>
                             <option value="director">Rendező</option>
