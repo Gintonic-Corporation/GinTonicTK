@@ -22,12 +22,10 @@
                 @if($errors->has('name'))
                     <span class="text-danger">{{$errors->first('name')}}</span>
                 @endif
-                <br>
-                <input type="text" id="email" name="email" placeholder="E-mail cím">
+                <input type="text" id="username" name="email" placeholder="E-mail cím">
                 @if($errors->has('email'))
                     <span class="text-danger">{{$errors->first('email')}}</span>
                 @endif
-                <br>
                 <input type="password" id="password" name="password" placeholder="Jelszó">
                 @if($errors->has('password'))
                     <span class="text-danger">{{$errors->first('password')}}</span>
