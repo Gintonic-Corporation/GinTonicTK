@@ -48,8 +48,8 @@ class BorrowController extends Controller
         ->value('rank');
         $maxBorrow=0;
         if($rang<5) $maxBorrow=1;
-        if($rang/5==1) $maxBorrow=2;
-        if($rang/5==2) $maxBorrow=3;
+        if(intdiv($rang,5)==1) $maxBorrow=2;
+        if(intdiv($rang,5)==2) $maxBorrow=3;
         if($rang>=15) $maxBorrow=4;
         if($maxBorrow>$taken){
         Borrow::create([
